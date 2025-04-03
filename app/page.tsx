@@ -26,7 +26,7 @@ const translations = {
     popular: "인기",
     book: "예약하기",
     services: {
-      title: "서비스",
+      title: "서비스를 사용하는 이유",
       phone: {
         title: "일본 전화번호 없이 예약",
         desc: "한국 전화번호만으로 일본 MZ세대에게 인기있는 레스토랑 예약 가능"
@@ -72,7 +72,7 @@ const translations = {
     popular: "人気店",
     book: "予約する",
     services: {
-      title: "私たちのサービス",
+      title: "IRUTOMOを使う理由",
       phone: {
         title: "日本の電話番号なしで予約",
         desc: "韓国の電話番号だけで日本MZ世代から人気のあるレストランを予約可能"
@@ -231,7 +231,7 @@ export default function Home() {
       {/* ヘッダー - 言語切り替えボタンを追加 */}
       <header className="flex justify-between items-center p-4 bg-white sticky top-0 z-50 shadow-custom">
         <div className="flex items-center">
-          <img src="/_img_IRUTOMO.svg" alt="IRUTOMO" className="h-8" />
+          <img src="/_img_IRUTOMO.svg" alt="IRUTOMO" className="h-6" />
         </div>
         <div className="flex items-center">
           {/* 言語切り替えボタン */}
@@ -423,7 +423,7 @@ export default function Home() {
       {/* フッター */}
       <footer className="bg-white pt-8 pb-20 px-4">
         <div className="flex items-center mb-6">
-          <img src="/_img_IRUTOMO.svg" alt="IRUTOMO" className="h-8" />
+          <img src="/_img_IRUTOMO.svg" alt="IRUTOMO" className="h-6" />
         </div>
         <p className="text-sm text-gray-500 mb-6">
           {t.footer.desc.split('\n').map((line, i) => (
