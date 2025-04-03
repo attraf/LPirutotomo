@@ -10,7 +10,7 @@ const translations = {
   ko: {
     siteName: "IRUTOMO",
     hero: {
-      title: "현지 일본인들로부터 인기있는 식당을 간단히 예약",
+      title: "현지 일본인부터 인기있는 식당 간단히 예약!!",
       subtitle: "전화 예약만 가능한 인기 식당도 IRUTOMO에게 맡겨주세요!",
       cta: "지금 예약하기"
     },
@@ -21,7 +21,7 @@ const translations = {
       { icon: "💬", name: "가이드" },
       { icon: "❓", name: "FAQ" },
     ],
-    popularRestaurants: "인기 식당",
+    popularRestaurants: "현지 인기 식당",
     viewMore: "더보기",
     popular: "인기",
     book: "예약하기",
@@ -29,36 +29,32 @@ const translations = {
       title: "서비스",
       phone: {
         title: "일본 전화번호 없이 예약",
-        desc: "한국 전화번호만으로 일본 인기 레스토랑을 예약할 수 있습니다. 일본어 대화 걱정 없이 맛있는 식당을 경험하세요."
+        desc: "한국 전화번호만으로 일본 MZ세대에게 인기있는 레스토랑 예약 가능"
       },
       easy: {
-        title: "다국어 지원",
-        desc: "한국어, 일본어, 영어로 서비스를 이용할 수 있어 언어 장벽 없이 편리하게 이용 가능합니다."
+        title: "외국인이 예약하기 어려운 식당도 게재",
+        desc: "IRUTOMO가 당신의 현지 체험을 서포트"
       },
       quick: {
         title: "신속한 예약 확정",
-        desc: "평균 2시간 이내에 예약을 확정해 드립니다. 급한 예약도 걱정하지 마세요."
-      },
-      payment: {
-        title: "간편한 결제",
-        desc: "신용카드 등 다양한 결제 방법을 지원합니다. 안전하고 편리한 결제 시스템을 이용하세요."
+        desc: "평균 2시간 이내에 예약을 확정해 드립니다. 예약 불가 시 100% 환불"
       }
     },
     testimonials: {
       title: "고객 후기",
     },
     cta: {
-      title: "지금 한국 맛집을 경험해보세요!",
-      desc: "24시간 언제든지 예약 요청 가능. 전화 예약만 가능한 인기 식당도 저희에게 맡겨주세요.",
-      button: "예약하기"
+      title: "지금 일본의 진짜 모습을 경험해보세요!",
+      desc: "게재된 식당 외에도 요청 가능합니다!",
+      button: "요청하기"
     },
     footer: {
-      desc: "한국의 맛있는 음식을 일본어로 쉽게 예약하세요.\n전화 예약만 가능한 식당도 저희에게 맡겨주세요.",
-      rights: " 2025 한국 맛집 예약 All Rights Reserved."
+      desc: "일본의 리얼을 더욱 즐겁게 체험!\n일본여행은　IRUTOMO!",
+      rights: "  © 2025 IRUTOMO. All rights reserved."
     }
   },
   ja: {
-    siteName: "韓国グルメ予約",
+    siteName: "IRUTOMO",
     hero: {
       title: "現地日本人から人気の食堂を簡単予約",
       subtitle: "電話予約のみの人気店も私たちにお任せください！",
@@ -79,32 +75,28 @@ const translations = {
       title: "私たちのサービス",
       phone: {
         title: "日本の電話番号なしで予約",
-        desc: "韓国の電話番号だけで日本の人気レストランを予約できます。日本語での会話の心配なく美味しいお店を体験しましょう。"
+        desc: "韓国の電話番号だけで日本MZ世代から人気のあるレストランを予約可能"
       },
       easy: {
-        title: "多言語対応",
-        desc: "韓国語、日本語、英語でサービスを利用できるため、言語の壁なく便利に利用可能です。"
+        title: "外国人が普段は予約できない食堂も掲載",
+        desc: "IRUTOMOがあなたのリアルな現地体験をサポート"
       },
       quick: {
         title: "迅速な予約確定",
-        desc: "平均2時間以内に予約を確定いたします。急ぎの予約も心配いりません。"
-      },
-      payment: {
-        title: "簡単な決済",
-        desc: "クレジットカードなど様々な決済方法に対応しています。安全で便利な決済システムをご利用ください。"
+        desc: "平均2時間以内に予約を確定いたします。予約不可時も100％返金"
       }
     },
     testimonials: {
       title: "お客様の声",
     },
     cta: {
-      title: "いますぐ韓国グルメを体験しよう！",
-      desc: "24時間いつでも予約リクエスト可能。電話予約のみの人気店舗も私たちにお任せください。",
-      button: "予約する"
+      title: "今すぐ日本のリアルを体験しよう！",
+      desc: "掲載店舗以外もリクエスト可能！",
+      button: "リクエストする"
     },
     footer: {
-      desc: "韓国の美味しいグルメを日本語でカンタン予約。\n電話予約のみのお店も私たちにお任せください。",
-      rights: " 2025 韓国グルメ予約 All Rights Reserved."
+      desc: "日本のリアルをもっと楽しく体験！\n日本旅行はIRUTOMO!",
+      rights: " © 2025 IRUTOMO. All rights reserved."
     }
   }
 };
@@ -113,52 +105,52 @@ const translations = {
 const restaurants = [
   {
     name: {
-      ko: "명동 칼국수",
-      ja: "明洞カルグクス"
+      ko: "철판 만두 만두의 야마자키",
+      ja: "鉄鍋餃子 餃子の山崎"
     },
     area: {
-      ko: "명동",
-      ja: "明洞"
+      ko: "오사카 북구",
+      ja: "大阪北区"
     },
-    rating: "4.8",
-    image: "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=400",
+    rating: "4.4",
+    image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=400",
     tags: {
-      ko: ["한식", "칼국수"],
-      ja: ["韓国料理", "カルグクス"]
+      ko: ["이자카야", "만두"],
+      ja: ["居酒屋", "餃子"]
     },
     popular: true
   },
   {
     name: {
-      ko: "토속촌 삼계탕",
-      ja: "土俗村参鶏湯"
+      ko: "오뎅 술집 유아미",
+      ja: "おでん酒場 湯あみ"
     },
     area: {
-      ko: "종로3가",
-      ja: "鐘路3街"
+      ko: "오사카 북구",
+      ja: "大阪北区"
     },
-    rating: "4.9",
-    image: "https://images.unsplash.com/photo-1580651315530-69c8e0026377?auto=format&fit=crop&w=400",
+    rating: "4.2",
+    image: "https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?auto=format&fit=crop&w=400",
     tags: {
-      ko: ["삼계탕", "한식"],
-      ja: ["参鶏湯", "韓国料理"]
+      ko: ["이자카야", "오뎅"],
+      ja: ["居酒屋", "おでん"]
     },
     popular: true
   },
   {
     name: {
-      ko: "원할머니 삼계탕",
-      ja: "ウォンハルメサムゲタン"
+      ko: "숯불구이 코쿠레",
+      ja: "炭火焼鳥 コクレ"
     },
     area: {
-      ko: "동대문",
-      ja: "東大門"
+      ko: "오사카 후쿠시마",
+      ja: "大阪福島"
     },
-    rating: "4.7",
-    image: "https://images.unsplash.com/photo-1635886840360-a2d27a5826d0?auto=format&fit=crop&w=400",
+    rating: "4.4",
+    image: "https://images.unsplash.com/photo-1591684080176-bb2b73f9ec68?auto=format&fit=crop&w=400",
     tags: {
-      ko: ["삼계탕", "한식"],
-      ja: ["参鶏湯", "韓国料理"]
+      ko: ["야키토리", "이자카야"],
+      ja: ["焼き鳥", "居酒屋"]
     }
   }
 ];
@@ -167,33 +159,63 @@ const restaurants = [
 const testimonials = [
   {
     text: {
-      ko: "전화 예약이 어려웠던 인기 식당에 갈 수 있어서 대만족!",
-      ja: "電話予約が難しかった人気店に行けて大満足！"
+      ko: "탄화구이 나카오의 훈제 향이 한국 고기구이와 비슷해서 최고! 닭고기가 매우 부드럽고 꼬치 종류도 다양해서 감동했어요. 가게 분위기도 좋고 직원들도 친절해서 또 방문하고 싶어요.",
+      ja: "韓国の焼肉に似たスモーキーな風味が最高！鶏肉はとても柔らかく、串の種類も豊富で感動、店内の雰囲気も良く、スタッフの対応も親切で、また来たいと思います。"
     },
     name: {
-      ko: "타나카 씨",
-      ja: "田中さん"
+      ko: "김민준",
+      ja: "キム・ミンジュン"
     },
     location: {
-      ko: "도쿄",
-      ja: "東京"
+      ko: "서울",
+      ja: "ソウル"
     },
-    rating: 5
+    date: "2024/5/15",
+    rating: 5,
+    restaurant: {
+      ko: "탄화구이 나카오",
+      ja: "炭火焼鳥 なかお"
+    }
   },
   {
     text: {
-      ko: "통역 지원이 있어서 안심하고 식사할 수 있었습니다",
-      ja: "通訳サポートがあって安心して食事ができました"
+      ko: "고기의 품질이 훌륭하고 셰프의 기술에 감탄했어요. 고기의 풍미가 확실히 느껴집니다. 굽는 정도도 완벽해서 다시 먹고 싶게 만드는 요리예요. 가게 분위기도 차분해서 좋은 시간을 보냈습니다.",
+      ja: "肉師じじいの肉の質が素晴らしく、シェフの技術に感心しました。肉の旨味がしっかりと感じられます。焼き加減も完璧で、また食べたいと思わせる一品。お店の雰囲気も落ち着いていて、良い時間を過ごせました。"
     },
     name: {
-      ko: "사토 씨",
-      ja: "佐藤さん"
+      ko: "이지은",
+      ja: "イ・ジウン"
     },
     location: {
-      ko: "오사카",
-      ja: "大阪"
+      ko: "부산",
+      ja: "釜山"
     },
-    rating: 5
+    date: "2024/5/10",
+    rating: 4,
+    restaurant: {
+      ko: "니쿠시 지지이",
+      ja: "肉師じじい"
+    }
+  },
+  {
+    text: {
+      ko: "오뎅의 따뜻함이 편안하고 한국 국물과 비슷한 맛이라 친숙함을 느꼈어요. 편안한 분위기에서 휴식할 수 있었고 직원들의 대응도 따뜻했어요. 다양한 재료를 즐길 수 있는 것도 매력적이라 추운 계절에 다시 방문하고 싶어요.",
+      ja: "おでんの温かさが心地よく、韓国のスープに似た味わいで懐かしさを感じました。居心地の良い雰囲気でリラックスでき、スタッフの対応も温かかったです。様々な具材が楽しめるのも魅力で、また寒い季節に訪れたいと思います。"
+    },
+    name: {
+      ko: "최지우",
+      ja: "チェ・ジウ"
+    },
+    location: {
+      ko: "인천",
+      ja: "仁川"
+    },
+    date: "2024/4/25",
+    rating: 4,
+    restaurant: {
+      ko: "오뎅 사카바 유아미",
+      ja: "おでん酒場 湯あみ"
+    }
   }
 ];
 
@@ -326,7 +348,7 @@ export default function Home() {
         </h2>
         <Card className="p-4 border-2 border-[#00CBB3] bg-white/50 hover-scale">
           <div className="flex items-center gap-4">
-            <Phone className="h-10 w-10 text-[#00CBB3] p-2 bg-[#00CBB3]/10 rounded-full" />
+            <div className="text-3xl flex items-center justify-center w-10 h-10">🌏</div>
             <div>
               <h3 className="font-bold mb-1">{t.services.phone.title}</h3>
               <p className="text-sm text-gray-600">{t.services.phone.desc}</p>
@@ -336,7 +358,7 @@ export default function Home() {
         
         <Card className="p-4 border-2 border-[#FFA500] bg-white/50 hover-scale">
           <div className="flex items-center gap-4">
-            <Calendar className="h-10 w-10 text-[#FFA500] p-2 bg-[#FFA500]/10 rounded-full" />
+            <div className="text-3xl flex items-center justify-center w-10 h-10">🍔</div>
             <div>
               <h3 className="font-bold mb-1">{t.services.easy.title}</h3>
               <p className="text-sm text-gray-600">{t.services.easy.desc}</p>
@@ -346,20 +368,10 @@ export default function Home() {
 
         <Card className="p-4 border-2 border-[#00CBB3] bg-white/50 hover-scale">
           <div className="flex items-center gap-4">
-            <Clock className="h-10 w-10 text-[#00CBB3] p-2 bg-[#00CBB3]/10 rounded-full" />
+            <div className="text-3xl flex items-center justify-center w-10 h-10">⏱️</div>
             <div>
               <h3 className="font-bold mb-1">{t.services.quick.title}</h3>
               <p className="text-sm text-gray-600">{t.services.quick.desc}</p>
-            </div>
-          </div>
-        </Card>
-
-        <Card className="p-4 border-2 border-[#FFA500] bg-white/50 hover-scale">
-          <div className="flex items-center gap-4">
-            <Calendar className="h-10 w-10 text-[#FFA500] p-2 bg-[#FFA500]/10 rounded-full" />
-            <div>
-              <h3 className="font-bold mb-1">{t.services.payment.title}</h3>
-              <p className="text-sm text-gray-600">{t.services.payment.desc}</p>
             </div>
           </div>
         </Card>
@@ -383,6 +395,7 @@ export default function Home() {
                 <div>
                   <p className="font-bold">{testimonial.name[language]}</p>
                   <p className="text-xs text-gray-500">{testimonial.location[language]}</p>
+                  <p className="text-xs text-gray-500">{testimonial.date}</p>
                 </div>
               </div>
               <div className="flex mb-2">
@@ -391,6 +404,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-sm">{testimonial.text[language]}</p>
+              <p className="text-xs text-gray-500">{testimonial.restaurant[language]}</p>
             </Card>
           ))}
         </div>
