@@ -231,7 +231,6 @@ export default function Home() {
       {/* ヘッダー - 言語切り替えボタンを追加 */}
       <header className="flex justify-between items-center p-4 bg-white sticky top-0 z-50 shadow-custom">
         <div className="flex items-center">
-          <span className="text-2xl mr-2">🍽️</span>
           <img src="/_img_IRUTOMO.svg" alt="IRUTOMO" className="h-8" />
         </div>
         <div className="flex items-center">
@@ -257,7 +256,7 @@ export default function Home() {
       {/* ヒーローバナー */}
       <div className="p-6 bg-gradient-to-br from-[#00CBB3] to-[#FFA500] rounded-2xl mx-4 my-6 text-white shadow-custom">
         <div className="flex items-center mb-4">
-          <span className="text-4xl mr-3">🇰🇷</span>
+          <span className="text-4xl mr-3">🎧</span>
           <h2 className="text-2xl font-bold">
             {t.hero.title.split('\n').map((line, i) => (
               <span key={i}>
@@ -424,8 +423,7 @@ export default function Home() {
       {/* フッター */}
       <footer className="bg-white pt-8 pb-20 px-4">
         <div className="flex items-center mb-6">
-          <span className="text-2xl mr-2">🍽️</span>
-          <h1 className="text-xl font-bold text-[#00CBB3]">{t.siteName}</h1>
+          <img src="/_img_IRUTOMO.svg" alt="IRUTOMO" className="h-8" />
         </div>
         <p className="text-sm text-gray-500 mb-6">
           {t.footer.desc.split('\n').map((line, i) => (
