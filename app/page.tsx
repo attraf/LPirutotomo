@@ -8,17 +8,17 @@ import { Button } from "@/components/ui/button";
 // 言語データの定義
 const translations = {
   ko: {
-    siteName: "한국 맛집 예약",
+    siteName: "IRUTOMO",
     hero: {
-      title: "현지 일본인들이 사랑하는 식당을 쉽게 예약하세요",
-      subtitle: "전화 예약만 가능한 인기 식당도 저희에게 맡겨주세요!",
+      title: "현지 일본인들로부터 인기있는 식당을 간단히 예약",
+      subtitle: "전화 예약만 가능한 인기 식당도 IRUTOMO에게 맡겨주세요!",
       cta: "지금 예약하기"
     },
     categories: [
       { icon: "🍜", name: "인기 식당" },
       { icon: "📱", name: "예약 방법" },
       { icon: "🗺️", name: "지역" },
-      { icon: "💬", name: "통역" },
+      { icon: "💬", name: "가이드" },
       { icon: "❓", name: "FAQ" },
     ],
     popularRestaurants: "인기 식당",
@@ -28,16 +28,20 @@ const translations = {
     services: {
       title: "서비스",
       phone: {
-        title: "전화 예약 대행",
-        desc: "일본어가 통하지 않는 인기 식당도 예약 가능"
+        title: "일본 전화번호 없이 예약",
+        desc: "한국 전화번호만으로 일본 인기 레스토랑을 예약할 수 있습니다. 일본어 대화 걱정 없이 맛있는 식당을 경험하세요."
       },
       easy: {
-        title: "간편한 예약",
-        desc: "24시간 언제든지 예약 요청 가능"
+        title: "다국어 지원",
+        desc: "한국어, 일본어, 영어로 서비스를 이용할 수 있어 언어 장벽 없이 편리하게 이용 가능합니다."
       },
       quick: {
-        title: "신속한 대응",
-        desc: "예약 확정 후 바로 연락 드립니다"
+        title: "신속한 예약 확정",
+        desc: "평균 2시간 이내에 예약을 확정해 드립니다. 급한 예약도 걱정하지 마세요."
+      },
+      payment: {
+        title: "간편한 결제",
+        desc: "신용카드 등 다양한 결제 방법을 지원합니다. 안전하고 편리한 결제 시스템을 이용하세요."
       }
     },
     testimonials: {
@@ -64,7 +68,7 @@ const translations = {
       { icon: "🍜", name: "人気店舗" },
       { icon: "📱", name: "予約方法" },
       { icon: "🗺️", name: "エリア" },
-      { icon: "💬", name: "通訳" },
+      { icon: "💬", name: "ガイド" },
       { icon: "❓", name: "FAQ" },
     ],
     popularRestaurants: "人気店舗",
@@ -74,16 +78,20 @@ const translations = {
     services: {
       title: "私たちのサービス",
       phone: {
-        title: "電話予約代行",
-        desc: "日本語が通じない人気店も予約可能"
+        title: "日本の電話番号なしで予約",
+        desc: "韓国の電話番号だけで日本の人気レストランを予約できます。日本語での会話の心配なく美味しいお店を体験しましょう。"
       },
       easy: {
-        title: "簡単予約",
-        desc: "24時間いつでも予約リクエスト可能"
+        title: "多言語対応",
+        desc: "韓国語、日本語、英語でサービスを利用できるため、言語の壁なく便利に利用可能です。"
       },
       quick: {
-        title: "迅速な対応",
-        desc: "予約確定後すぐにご連絡いたします"
+        title: "迅速な予約確定",
+        desc: "平均2時間以内に予約を確定いたします。急ぎの予約も心配いりません。"
+      },
+      payment: {
+        title: "簡単な決済",
+        desc: "クレジットカードなど様々な決済方法に対応しています。安全で便利な決済システムをご利用ください。"
       }
     },
     testimonials: {
@@ -342,6 +350,16 @@ export default function Home() {
             <div>
               <h3 className="font-bold mb-1">{t.services.quick.title}</h3>
               <p className="text-sm text-gray-600">{t.services.quick.desc}</p>
+            </div>
+          </div>
+        </Card>
+
+        <Card className="p-4 border-2 border-[#FFA500] bg-white/50 hover-scale">
+          <div className="flex items-center gap-4">
+            <Calendar className="h-10 w-10 text-[#FFA500] p-2 bg-[#FFA500]/10 rounded-full" />
+            <div>
+              <h3 className="font-bold mb-1">{t.services.payment.title}</h3>
+              <p className="text-sm text-gray-600">{t.services.payment.desc}</p>
             </div>
           </div>
         </Card>
