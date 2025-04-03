@@ -149,8 +149,8 @@ const restaurants = [
     rating: "4.4",
     image: "https://images.unsplash.com/photo-1591684080176-bb2b73f9ec68?auto=format&fit=crop&w=400",
     tags: {
-      ko: ["야키토리", "이자카야"],
-      ja: ["焼き鳥", "居酒屋"]
+      ko: ["이자카야", "야키토리"],
+      ja: ["居酒屋", "焼き鳥"]
     }
   }
 ];
@@ -232,7 +232,7 @@ export default function Home() {
       <header className="flex justify-between items-center p-4 bg-white sticky top-0 z-50 shadow-custom">
         <div className="flex items-center">
           <span className="text-2xl mr-2">🍽️</span>
-          <h1 className="text-xl font-bold text-[#00CBB3]">{t.siteName}</h1>
+          <img src="/_img_IRUTOMO.svg" alt="IRUTOMO" className="h-8" />
         </div>
         <div className="flex items-center">
           {/* 言語切り替えボタン */}
