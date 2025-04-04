@@ -269,9 +269,11 @@ export default function Home() {
           </h2>
         </div>
         <p className="text-sm opacity-90 mb-4">{t.hero.subtitle}</p>
-        <Button className="w-full bg-white text-[#00CBB3] hover:bg-white/90 font-bold py-3 rounded-xl hover-scale">
-          {t.hero.cta}
-        </Button>
+        <Link href="/restaurants">
+          <Button className="w-full bg-white text-[#00CBB3] hover:bg-white/90 font-bold py-3 rounded-xl hover-scale">
+            {t.hero.cta}
+          </Button>
+        </Link>
       </div>
 
       {/* カテゴリー */}
@@ -281,6 +283,18 @@ export default function Home() {
           if (category.name === "FAQ" || category.name === "FAQ") {
             return (
               <Link key={i} href="/faq" className="text-center focus:outline-none">
+                <div className="bg-white w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-2 shadow-custom hover:bg-[#00CBB3]/10 transition-colors hover-scale">
+                  <span className="text-2xl">{category.icon}</span>
+                </div>
+                <p className="text-xs">{category.name}</p>
+              </Link>
+            );
+          }
+          
+          // 人気店舗カテゴリーの場合はリンクを追加
+          if (category.icon === "🍜") {
+            return (
+              <Link key={i} href="/restaurants" className="text-center focus:outline-none">
                 <div className="bg-white w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-2 shadow-custom hover:bg-[#00CBB3]/10 transition-colors hover-scale">
                   <span className="text-2xl">{category.icon}</span>
                 </div>
@@ -346,10 +360,12 @@ export default function Home() {
             <span className="text-xl mr-2">🔥</span>
             {t.popularRestaurants}
           </h2>
-          <Button variant="ghost" className="text-sm text-[#FFA500] font-medium flex items-center">
-            {t.viewMore}
-            <ChevronRight className="h-4 w-4 ml-1" />
-          </Button>
+          <Link href="/restaurants">
+            <Button variant="ghost" className="text-sm text-[#FFA500] font-medium flex items-center">
+              {t.viewMore}
+              <ChevronRight className="h-4 w-4 ml-1" />
+            </Button>
+          </Link>
         </div>
         <div className="space-y-4">
           {restaurants.map((restaurant, i) => (
@@ -467,9 +483,11 @@ export default function Home() {
         <Card className="p-6 bg-gradient-to-br from-[#00CBB3] to-[#FFA500] text-white shadow-custom">
           <h2 className="text-xl font-bold mb-3">{t.cta.title}</h2>
           <p className="text-sm mb-4">{t.cta.desc}</p>
-          <Button className="w-full bg-white text-[#00CBB3] hover:bg-white/90 font-bold py-3 rounded-xl hover-scale">
-            {t.cta.button}
-          </Button>
+          <Link href="/request">
+            <Button className="w-full bg-white text-[#00CBB3] hover:bg-white/90 font-bold py-3 rounded-xl hover-scale">
+              {t.cta.button}
+            </Button>
+          </Link>
         </Card>
       </section>
 
