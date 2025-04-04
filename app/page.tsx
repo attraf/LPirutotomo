@@ -1,9 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Bell, MapPin, Phone, Calendar, Clock, Star, ChevronRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // 言語データの定義
 const translations = {
@@ -11,13 +13,13 @@ const translations = {
     siteName: "IRUTOMO",
     hero: {
       title: "현지 일본인부터 인기있는 식당 간단히 예약!!",
-      subtitle: "전화 예약만 가능한 인기 식당도 IRUTOMO에게 맡겨주세요!",
+      subtitle: "일본어로 전화만 예약가능한 식당도 저희라면 가능합니다!",
       cta: "지금 예약하기"
     },
     categories: [
       { icon: "🍜", name: "인기 식당" },
       { icon: "📱", name: "예약 방법" },
-      { icon: "🗺️", name: "지역" },
+      { icon: "🗺️", name: "일본 정보" },
       { icon: "💬", name: "가이드" },
       { icon: "❓", name: "FAQ" },
     ],
@@ -63,7 +65,7 @@ const translations = {
     categories: [
       { icon: "🍜", name: "人気店舗" },
       { icon: "📱", name: "予約方法" },
-      { icon: "🗺️", name: "エリア" },
+      { icon: "🗺️", name: "日本情報" },
       { icon: "💬", name: "ガイド" },
       { icon: "❓", name: "FAQ" },
     ],
@@ -220,8 +222,8 @@ const testimonials = [
 ];
 
 export default function Home() {
-  // 言語切り替え用のステート（デフォルトは韓国語）
-  const [language, setLanguage] = useState<"ko" | "ja">("ko");
+  // 言語コンテキストから言語設定を取得
+  const { language, setLanguage } = useLanguage();
   
   // 翻訳データの取得
   const t = translations[language];
@@ -274,14 +276,65 @@ export default function Home() {
 
       {/* カテゴリー */}
       <div className="grid grid-cols-5 gap-3 px-4 mb-8">
-        {t.categories.map((category, i) => (
-          <button key={i} className="text-center focus:outline-none">
-            <div className="bg-white w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-2 shadow-custom hover:bg-[#00CBB3]/10 transition-colors hover-scale">
-              <span className="text-2xl">{category.icon}</span>
-            </div>
-            <span className="text-xs font-medium">{category.name}</span>
-          </button>
-        ))}
+        {t.categories.map((category, i) => {
+          // FAQカテゴリーの場合はリンクを追加
+          if (category.name === "FAQ" || category.name === "FAQ") {
+            return (
+              <Link key={i} href="/faq" className="text-center focus:outline-none">
+                <div className="bg-white w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-2 shadow-custom hover:bg-[#00CBB3]/10 transition-colors hover-scale">
+                  <span className="text-2xl">{category.icon}</span>
+                </div>
+                <p className="text-xs">{category.name}</p>
+              </Link>
+            );
+          }
+          
+          // 予約方法カテゴリーの場合はリンクを追加
+          if (category.icon === "📱") {
+            return (
+              <Link key={i} href="/how-to-use" className="text-center focus:outline-none">
+                <div className="bg-white w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-2 shadow-custom hover:bg-[#00CBB3]/10 transition-colors hover-scale">
+                  <span className="text-2xl">{category.icon}</span>
+                </div>
+                <p className="text-xs">{category.name}</p>
+              </Link>
+            );
+          }
+          
+          // ガイドカテゴリーの場合は外部リンクを追加
+          if (category.icon === "💬") {
+            return (
+              <a key={i} href="https://irutomops.studio.site" target="_blank" rel="noopener noreferrer" className="text-center focus:outline-none">
+                <div className="bg-white w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-2 shadow-custom hover:bg-[#00CBB3]/10 transition-colors hover-scale">
+                  <span className="text-2xl">{category.icon}</span>
+                </div>
+                <p className="text-xs">{category.name}</p>
+              </a>
+            );
+          }
+          
+          // 日本情報カテゴリーの場合はInstagramリンクを追加
+          if (category.icon === "🗺️") {
+            return (
+              <a key={i} href="https://www.instagram.com/irutomo__kr?igshid=MWtmdmF0bHc4OXJ6bw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-center focus:outline-none">
+                <div className="bg-white w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-2 shadow-custom hover:bg-[#00CBB3]/10 transition-colors hover-scale">
+                  <span className="text-2xl">{category.icon}</span>
+                </div>
+                <p className="text-xs">{category.name}</p>
+              </a>
+            );
+          }
+          
+          // その他のカテゴリーは通常のボタン
+          return (
+            <button key={i} className="text-center focus:outline-none">
+              <div className="bg-white w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-2 shadow-custom hover:bg-[#00CBB3]/10 transition-colors hover-scale">
+                <span className="text-2xl">{category.icon}</span>
+              </div>
+              <p className="text-xs">{category.name}</p>
+            </button>
+          );
+        })}
       </div>
 
       <div className="section-divider mx-4" />
@@ -433,6 +486,14 @@ export default function Home() {
             </span>
           ))}
         </p>
+        <div className="mb-4 flex flex-wrap gap-x-4 text-xs text-gray-500">
+          <Link href="/privacy-policy" className="hover:text-[#00CBB3]">
+            {language === "ko" ? "개인정보 처리방침" : "プライバシーポリシー"}
+          </Link>
+          <Link href="/legal" className="hover:text-[#00CBB3]">
+            {language === "ko" ? "특정 상거래법에 기반한 표기" : "特定商取引法に基づく表記"}
+          </Link>
+        </div>
         <div className="text-xs text-gray-400">
           {t.footer.rights}
         </div>

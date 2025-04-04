@@ -1,6 +1,5 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { LanguageProvider } from '@/contexts/LanguageContext';
 
 export const metadata: Metadata = {
   title: '韓国グルメ予約サービス',
@@ -26,9 +25,7 @@ export default function RootLayout({
           WebkitTapHighlightColor: 'transparent'
         }}
       >
-        <LanguageProvider>
-          {children}
-        </LanguageProvider>
+        {children}
       </body>
     </html>
   );
