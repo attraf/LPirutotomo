@@ -40,6 +40,10 @@ const translations = {
       quick: {
         title: "신속한 예약 확정",
         desc: "평균 2시간 이내에 예약을 확정해 드립니다. 예약 불가 시 100% 환불"
+      },
+      premium: {
+        title: "고급 식당도 대행 수수료 ¥1,000부터",
+        desc: "IRUTOMO는 단순한 예약 대행이 아닙니다. 일본 현지인과의 채팅 서포트 이용 가능!"
       }
     },
     testimonials: {
@@ -86,6 +90,10 @@ const translations = {
       quick: {
         title: "迅速な予約確定",
         desc: "平均2時間以内に予約を確定いたします。予約不可時も100％返金"
+      },
+      premium: {
+        title: "高級食堂も代行手数料￥1,000から",
+        desc: "IRUTOMOはただの予約代行ではありません、日本現地人とのチャットサポートが利用可能！"
       }
     },
     testimonials: {
@@ -440,6 +448,16 @@ export default function Home() {
             <div>
               <h3 className="font-bold mb-1">{t.services.quick.title}</h3>
               <p className="text-sm text-gray-600">{t.services.quick.desc}</p>
+            </div>
+          </div>
+        </Card>
+
+        <Card className="p-4 border-2 border-[#FFA500] bg-white/50 hover-scale">
+          <div className="flex items-center gap-4">
+            <div className="text-3xl flex items-center justify-center w-10 h-10">💰</div>
+            <div>
+              <h3 className="font-bold mb-1">{t.services.premium.title}</h3>
+              <p className="text-sm text-gray-600">{t.services.premium.desc}</p>
             </div>
           </div>
         </Card>
