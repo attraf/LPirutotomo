@@ -14,7 +14,7 @@ import { useRouter } from "next/navigation";
 // 言語データの定義
 const translations = {
   ko: {
-    pageTitle: "요청 양식",
+    pageTitle: "요청 폼",
     backToHome: "홈으로 돌아가기",
     description: "게재된 식당 외에도 요청 가능합니다. 아래 양식을 작성해 주세요.",
     restaurantName: "예약하고 싶은 식당 이름",

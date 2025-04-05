@@ -26,7 +26,7 @@ const translations = {
     popularRestaurants: "현지 인기 식당",
     viewMore: "더보기",
     popular: "인기",
-    book: "예약하기",
+    book: "자세히 보기",
     services: {
       title: "서비스를 사용하는 이유",
       phone: {
@@ -76,7 +76,7 @@ const translations = {
     popularRestaurants: "人気店舗",
     viewMore: "もっと見る",
     popular: "人気店",
-    book: "予約する",
+    book: "詳細を見る",
     services: {
       title: "IRUTOMOを使う理由",
       phone: {

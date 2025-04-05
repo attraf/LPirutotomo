@@ -13,7 +13,7 @@ const translations = {
     pageTitle: "식당 리스트",
     backToHome: "홈으로 돌아가기",
     popular: "인기",
-    book: "예약하기",
+    book: "자세히 보기",
     map: "지도 보기",
     filter: {
       all: "전체",
@@ -26,7 +26,7 @@ const translations = {
     pageTitle: "食堂一覧",
     backToHome: "ホームに戻る",
     popular: "人気店",
-    book: "予約する",
+    book: "詳細を見る",
     map: "地図を見る",
     filter: {
       all: "すべて",
